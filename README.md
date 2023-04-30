@@ -1,5 +1,5 @@
 # PYTHON-BASIC-PROGRAMMES
-just basic python programmes 
+just basic python programmes :)
 
 1. PRIME NUMBERS
 2. TWISTED PRIME
@@ -10,4 +10,4 @@ just basic python programmes
 7. FIBONACCI SERIES UPTO YOUR INTEGER INPUT
 8. GUESSING THE RANDOM NUMBER GAME
 9. ROCK PAPER SCISSOR GAME
-
+10. PASSWORD GENERATOR
