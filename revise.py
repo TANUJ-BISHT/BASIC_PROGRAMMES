@@ -1,3 +1,5 @@
+
+#prime number checker
 def prime(x):
     if x <= 0:
         print(x, ' should be natural number to be prime')
@@ -11,6 +13,7 @@ def prime(x):
         else:
             print(x, ' is a prime number')
 
+#twister prime checker
 def twisted_prime(x):
     if x <= 0:
         print(x, ' should be natural number to be twisted_prime')
@@ -34,6 +37,8 @@ def twisted_prime(x):
             else:
                 print(x, ' is  a twisted_prime number')
 
+                
+#magic number checker
 def magic(x):
     sum = 0
     for i in str(x):
@@ -46,6 +51,7 @@ def magic(x):
     else:
         magic(sum)
 
+#amstrong number checker
 def amstrong(x):
     a = 0
     b = 0
@@ -59,6 +65,7 @@ def amstrong(x):
     else:
         print(x, ' is not a amstrong number')
 
+#perfect number checker
 def perfect(x):
     list = []
     for i in range(1, x):
@@ -72,6 +79,7 @@ def perfect(x):
     else:
         print(x, ' is not a prime number')
 
+#pallendrome numbers checker
 def pallendrome(x):
     k = str(x)
     str1 = ''
@@ -82,6 +90,7 @@ def pallendrome(x):
     else:
         print(x, 'is not a pallendrome number')
 
+#fibonacci series
 def fibonacci(x):
     a, b, c = 1, 1, 0
     while (c <= x):
@@ -89,7 +98,8 @@ def fibonacci(x):
         print(a, ' + ', b, ' = ', c)
         a = b
         b = c
-
+        
+#guess the number from 1 to 100 to win 
 def random_number_guess_game():
     import random
     a = random.randint(1, 100)
@@ -110,6 +120,7 @@ def random_number_guess_game():
     else:
         print(f'NOICE !! you r good at this :) \n you take only {c} chances')
 
+#rock paper scissor game
 def rock_paper_scissor():
 
     import random
@@ -129,4 +140,15 @@ def rock_paper_scissor():
         else: 
             print(f'lose machine entered {b}')
 
-        run = int(input('enter 1 to continue and 0 to stop'))
+        run = int(input('enter 1 to continue and 0 to stop'))  
+        
+        
+#password generator 8 characters
+def password_gen8():
+    import random
+    charecters_list = [f'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S','T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','$','@','!','*','%','&'
+                   ]
+    password = ''
+    for i in range(8):
+        password += random.choice(charecters_list)
+    print(f'you password is :- {password}')
