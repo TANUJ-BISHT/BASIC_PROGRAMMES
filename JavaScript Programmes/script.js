@@ -74,6 +74,19 @@ function check_amstrong(number) {
     : console.log(`${number} is not an Armstrong number`);
 }
 
+//====CHECKING PERFECT NUMBER====
+function isPerfect(number) {
+  let sum = 0;
+  for (let i = 1; i < number; i++) {
+    if (number % i === 0) {
+      sum += i;
+    }
+  }
+  sum === number
+    ? console.log(`${number} is Perfect Number`)
+    : console.log(`${number} is not Perfect Number`);
+}
+
 //CHECKING PALLENDROME NUMBER====
 function isPalindrome(number) {
   const reverseNumber = parseInt(
