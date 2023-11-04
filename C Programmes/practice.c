@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 void revarr(int arr[], int n);
 void fibonacci(int x);
@@ -6,6 +7,10 @@ int factorial(int nu);
 int prime_num(int num);
 int reverseInteger(int num);
 int grade_check(int percentage);
+void Armstrong(int num);
+void checkPalindrome(int num);
+int getSumOfDigits(int num);
+void checkMagicNumber(int num);
 
 int main()
 {
@@ -47,17 +52,15 @@ void fibonacci(int x)
     };
 };
 
-// FACTORIAL BY RECURSION
-int factorial(int nu)
+// FACTORIAL
+int factorial(int num)
 {
-    if (nu <= 1)
+    int result = 1;
+    for (int i = 1; i <= num; i++)
     {
-        return 1;
+        result *= i;
     }
-    else
-    {
-        return nu * factorial(nu - 1);
-    }
+    return result;
 };
 
 // PRIME NUMBER CHECK
@@ -131,5 +134,72 @@ int grade_check(int percentage)
     else
     {
         printf("PLEASE PUT PERCENTAGE BETEN 1 - 100");
+    }
+}
+
+//AMSTRONG NUMBER CHECKER
+void Armstrong(int num) {
+    int Temp_OG = num, n = 0, result = 0, remain;
+
+    // Count the number of digits
+    while (Temp_OG != 0) {
+        Temp_OG /= 10;
+        ++n;
+    }
+
+    Temp_OG = num;
+
+    while (Temp_OG != 0) {
+        remain = Temp_OG % 10;
+        result += pow(remain, n);
+        Temp_OG /= 10;
+    }
+
+    if (result == num) {
+        printf("%d is an Armstrong number.\n", num);
+    } else {
+        printf("%d is not an Armstrong number.\n", num);
+    }
+}
+
+
+//PALLENDROME NUMBER CHECK
+void checkPalindrome(int num) {
+    int reversed = 0, original = num;
+    
+    while (num > 0) {
+        int digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
+    }
+
+    if (reversed == original) {
+        printf("%d is a palindrome number.\n", original);
+    } else {
+        printf("%d is not a palindrome number.\n", original);
+    }
+}
+
+//MAGIC NUMBER CHECKER
+int getSumOfDigits(int num) {
+    int sum = 0;
+    while (num > 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
+
+void checkMagicNumber(int num) {
+    int result = num;
+    
+    while (result > 9) {
+        result = getSumOfDigits(result);
+    }
+
+    if (result == 1) {
+        printf("%d is a magic number.\n", num);
+    } else {
+        printf("%d is not a magic number.\n", num);
     }
 }
